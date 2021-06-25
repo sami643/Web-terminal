@@ -1,0 +1,88 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        //- // Bootstrap CSS
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+        //- // Optional JavaScript
+        //- // jQuery first, then Popper.js, then Bootstrap JS
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
+        meta(name='viewport' content='width-device-width, initial-scale-1.0')
+        link(rel='stylesheet' href='../static/psl.css')
+        link(rel='stylesheet' href='../static/proj.css')
+        script(src='../static/psl.js')
+        title PSL
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    //- // -----Title part-----------
+    body
+        //- p hi
+        #container
+            #Home.header
+                h1 PSL league matches
+            // -----Sticky menu-----------
+            #Home.menu.sticky
+            .menu1
+                a(href='#Home')
+                    b Home
+            .menu1
+                a(href='#About')
+                    b About
+            .menu1
+                a(href='#Open hours')
+                    b Match hours
+            .LoginAdmin
+                button#button1(onclick="document.getElementById('id01').style.display='block'" style='width:auto;')
+                    b Login Admin 
+            // -----Slogan part-----------
+            #right-main.bodyPart1
+                p
+                    b  Today&apos;s Match 
+                div
+                    span.daymatch  match will be uploaded here..
+            // -----About portfolio-----------
+            #About.bodypart2
+                div
+                    img(src='PSL-1.jpg' width='200' style='border-radius: 50%;')
+                div
+                    h3 Our website
+                    p
+                    | Since opening in 2015, we have become masters of our craft.We have outstanding delivery of PLs Matches in pakistan You can check details of every match here.
+                // ------Services----------
+                // -----Match hours hours-----------
+            .bodypart4(id='Open hours')
+                div
+                    h2
+                    | Match hours
+                    p(style='padding-inline-start: 120px;')
+                    | 02:00am- 06:00pm wednesday and saturday
+            // -----Admin login form-----------
+            #id01.modal
+                form.modal-content.animate
+                    .imgcontainer
+                        img.avatar(src='../static/Login.jpg' alt='Avatar' style='width: 10%;')
+                    .container
+                        label(for='Email')
+                            b Email Address
+                        input(type='email' placeholder='Enter Email' name='email' required='')
+                        label(for='psw')
+                            b Password
+                        input(type='password' placeholder='Enter Password' name='psw' required='')
+                        button(type='submit')
+                            b Login
+                        input(type='checkbox' checked='checked' name='remember')
+                        |  Remember me
+                        .container(style='background-color:#f1f1f1')
+                        button.cancelbtn(type='button' onclick="document.getElementById('id01').style.display='none'") Cancel
+            // Modal
+            #Updatebtn.modal.fade(tabindex='-1' role='dialog' aria-labelledby='modelTitleId' aria-hidden='true')
+                .modal-dialog(role='document')
+                    .modal-content
+                    .modal-header
+                        h5#SubmissionText.modal-title
+                    .modal-body
+                    button.btn.btn-primary(type='button') Close
+        form(method='get' action='')
